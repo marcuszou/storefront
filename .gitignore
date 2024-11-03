@@ -1,0 +1,8 @@
+.venv/
+playground/__pycache__/
+playground/migrations/
+store/__pycache__/
+store/migrations/
+tags/__pycache__/
+tags/migrations/
+stonefront/__pycache__/
