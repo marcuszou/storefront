@@ -53,7 +53,17 @@ python manage.py startapp playground
 ```
 
 ## Coding
-
+### Django Supported Database Engines
+- SQLite  (Intro to this)
+- PostgreSQL
+- MySQL   (then focus on this)
+- MariaDB
+- Oracle
+- MS SQL Server
+### Migration of SQLiye
+```shell
+python manage.py makemigrations
+```
 
 ## License
 MIT

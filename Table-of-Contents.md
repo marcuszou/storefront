@@ -29,7 +29,7 @@
 4- Organizing Models in Apps <br>
 5- Creating Models <br>
 6- Choice Fields <br>
-7- Defining One-to-one Relationships - __@Paused__ <br>
+7- Defining One-to-one Relationships <br>
 8- Defining a One-to-many Relationship <br>
 9- Defining Many-to-many Relationships <br>
 10- Resolving Circular Relationships <br>
@@ -40,7 +40,7 @@
 1- Introduction <br>
 2- Supported Database Engines <br>
 3- Creating Migrations <br>
-4- Running Migrations <br>
+4- Running Migrations __@Paused__<br>
 5- Customizing Database Schema <br>
 6- Reverting Migrations <br>
 7- Installing MySQL <br>
