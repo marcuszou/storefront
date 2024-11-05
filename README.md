@@ -1,6 +1,5 @@
 # alfonShop - storeFront
 
-
 ## Tech Stack
 
 1. Python3: 3.11.10 (macOS Sonoma and Ubuntu 24.04)
@@ -16,9 +15,6 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
 sudo apt install python3.11
 ```
-
-
-
 ## Setup
 
 It's way better to setup a Virtual Env for any Python project, here is the how-to:
@@ -27,11 +23,11 @@ It's way better to setup a Virtual Env for any Python project, here is the how-t
 sudo apt install python3-virtualenv
 ## in MacOS
 ## sudo port install python3-virtualenv
-## Create a virtual env with name of ".venv"
+## Create a virtual env with name of ".venv" in Python3.11
 mkdir myStore
 cd myStore
 virtualenv .venv
-## In case of host having Python 3.10 but you perfer Python 3.11 in the venv
+## In case of host having Python 3.10 (Ubuntu 22.04) but you perfer Python 3.11 in the venv
 virtualenv -p python3.11 .venv
 ## In case of you are a fan of the Python3 module (venv)
 ## python3 -m venv .venv
@@ -52,7 +48,16 @@ python manage.py startapp playground
 
 ```
 
+## Daily Coding under .venv please
+
+```
+cd storeFront
+code .
+source .venv/bin/activate
+```
+
 ## Coding
+
 ### Django Supported Database Engines
 - SQLite  (Intro to this)
 - PostgreSQL

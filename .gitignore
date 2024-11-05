@@ -6,3 +6,6 @@ store/migrations/
 tags/__pycache__/
 tags/migrations/
 stonefront/__pycache__/
+likes/migrations/
+likes/__pycache__/
+
