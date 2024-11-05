@@ -69,11 +69,24 @@ source .venv/bin/activate
 ```shell
 python manage.py makemigrations
 ```
+<<<<<<< HEAD
 ### 4.4 migrate
 ```shell
 python manage.py migrate
 ```
 Also install a VScode extension: SQLite (by alexcvzz)
+=======
+### 4.6 reverting migrations
+```shell
+python manage.py migrate store 003 ## the last step was 004
+```
+Then delete related files, that's very tideous!
+The best way is to use git
+```shell
+git log --oneline
+git reset --hard HEAD~1
+```
+>>>>>>> a844af3 (update 4.8)
 
 ## License
 MIT
