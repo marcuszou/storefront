@@ -65,10 +65,15 @@ source .venv/bin/activate
 - MariaDB
 - Oracle
 - MS SQL Server
-### Migration of SQLiye
+### 4.3 Migration of SQLite
 ```shell
 python manage.py makemigrations
 ```
+### 4.4 migrate
+```shell
+python manage.py migrate
+```
+Also install a VScode extension: SQLite (by alexcvzz)
 
 ## License
 MIT
