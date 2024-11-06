@@ -75,18 +75,42 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 Also install a VScode extension: SQLite (by alexcvzz)
-=======
+
 ### 4.6 reverting migrations
 ```shell
 python manage.py migrate store 003 ## the last step was 004
 ```
 Then delete related files, that's very tideous!
-The best way is to use git
+
+The best way is to use git -
 ```shell
 git log --oneline
 git reset --hard HEAD~1
 ```
->>>>>>> a844af3 (update 4.8)
+### 4.7 install MySQL
+Go to https://dev.mysql.com/downloads/mysql/ to download the MySQL Community Server installer and install it.
+
+In case of WSL, you have to install MySQL in a special way:
+1. Open https://dev.mysql.com/downloads/repo/apt/ to download mysql-apt-config_0.8.33-1_all.deb.
+2. Run `sudo deb -i mysql-apt-config_0.8.33-1_all.deb  ` to install and configure the apt repository.
+3. Run commands below:
+    ```shell
+    sudo apt update
+    sudo apt install mysql-server
+    ```
+4. Run `sudo service mysql status` to tell the status.
+   Optionally  `sudo service mysql stop/start`...
+
+### 4.8 MySQL client tools
+- MySQL Workbench (Free)
+- TablePlus ($59)
+- JetBrains DataGrip ($89 or 30-day trial): we will use this.
+    ```shell
+    # download linux installer from JetBrains website
+    tar -xzvf ~/Downloads/datagrip-2024.2.2.tar.gz
+    sudo mv DataGrip-2024.2.2/ /opt/
+    /opt/DataGrip-2024.2.2/bin/datagrip
+
 
 ## License
 MIT
