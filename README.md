@@ -65,6 +65,17 @@ source .venv/bin/activate
 - MariaDB
 - Oracle
 - MS SQL Server
+### 2.4 Setup the Dev Environment
+```shell
+pip3 install pipenv
+```
+### 2.5 Create the first Django project
+```shell
+mkdir storeFront
+cd storeFront
+pipenv install django
+```
+
 ### 4.3 Migration of SQLite
 ```shell
 python manage.py makemigrations
@@ -92,15 +103,25 @@ Go to https://dev.mysql.com/downloads/mysql/ to download the MySQL Community Ser
 
 In case of WSL, you have to install MySQL in a special way:
 1. Open https://dev.mysql.com/downloads/repo/apt/ to download mysql-apt-config_0.8.33-1_all.deb.
-2. Run `sudo deb -i mysql-apt-config_0.8.33-1_all.deb  ` to install and configure the apt repository.
-3. Run commands below:
+2. Run the command below to install and configure the apt repository.
+    ```shell
+    sudo deb -i mysql-apt-config_0.8.33-1_all.deb
+    ``` 
+3. Run commands below to install mysql server:
     ```shell
     sudo apt update
     sudo apt install mysql-server
     ```
-4. Run `sudo service mysql status` to tell the status.
-   Optionally  `sudo service mysql stop/start`...
-
+4. Run the commands below to tell the status:
+    ```shell
+    sudo service mysql stop
+    sudo service mysql start
+    sudo service mysql status
+    ```
+5. add the PATH
+    ```shell
+    export PATH=${PATH}:/usr/local/mysql/bin/
+    ```
 ### 4.8 MySQL client tools
 - MySQL Workbench (Free)
 - TablePlus ($59)
