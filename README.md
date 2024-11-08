@@ -131,6 +131,40 @@ In case of WSL, you have to install MySQL in a special way:
     tar -xzvf ~/Downloads/datagrip-2024.2.2.tar.gz
     sudo mv DataGrip-2024.2.2/ /opt/
     /opt/DataGrip-2024.2.2/bin/datagrip
+    ## then connect to the mysqld, also run a query
+    CREATE DATABASE storefront
+    ```
+    Then 
+    ```shell
+    code .
+    ```
+    then in the terminal of VS Code, run:
+    ```shell 
+    pipenv install mysqlclient==2.1.1
+    ```
+### 4.9 change the database from sqlite3 to mysql in project's settings.py
+```shell
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'storefront',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'Kanada2024!sql'
+    }
+}
+```
+Run the Django server. If encountering `NameError: name '_mysql' is not defined`, please run
+```shell
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
+## then
+python manage.py runserver
+```
+If the django server is running okay, migrate the new database:
+```shell
+python manage.py migrate
+python manage.py runserver
+```
 
 
 ## License
