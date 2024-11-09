@@ -118,9 +118,9 @@ In case of WSL, you have to install MySQL in a special way:
     sudo service mysql start
     sudo service mysql status
     ```
-5. add the PATH
+5. add the PATH into your `.bashrc` file
     ```shell
-    export PATH=${PATH}:/usr/local/mysql/bin/
+    export PATH=$PATH:/usr/local/mysql/bin/
     ```
 ### 4.8 MySQL client tools
 - MySQL Workbench (Free)
@@ -131,18 +131,18 @@ In case of WSL, you have to install MySQL in a special way:
     tar -xzvf ~/Downloads/datagrip-2024.2.2.tar.gz
     sudo mv DataGrip-2024.2.2/ /opt/
     /opt/DataGrip-2024.2.2/bin/datagrip
-    ## then connect to the mysqld, also run a query
+    ## then connect to the mysqld, also execute a query
     CREATE DATABASE storefront
     ```
     Then 
     ```shell
     code .
     ```
-    then in the terminal of VS Code, run:
+    then in the terminal of VS Code, run (have to specify version of mysqlclient):
     ```shell 
     pipenv install mysqlclient==2.1.1
     ```
-### 4.9 change the database from sqlite3 to mysql in project's settings.py
+### 4.9 change the database from sqlite3 to mysql in project's `settings.py` file
 ```shell
 DATABASES = {
     'default': {
@@ -154,7 +154,7 @@ DATABASES = {
     }
 }
 ```
-Run the Django server. If encountering `NameError: name '_mysql' is not defined`, please add the folllowing to ~/.zshrc file.
+Run the Django server. If encountering `NameError: name '_mysql' is not defined`, please add the folllowing to ~/.zshrc file (macOS), or .bashrc fle (Linux).
 ```shell
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
 ```
