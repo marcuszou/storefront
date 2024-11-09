@@ -154,12 +154,11 @@ DATABASES = {
     }
 }
 ```
-Run the Django server. If encountering `NameError: name '_mysql' is not defined`, please run
+Run the Django server. If encountering `NameError: name '_mysql' is not defined`, please add the folllowing to ~/.zshrc file.
 ```shell
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
-## then
-python manage.py runserver
 ```
+
 If the django server is running okay, migrate the new database:
 ```shell
 python manage.py migrate
